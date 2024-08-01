@@ -3,11 +3,11 @@ import Button from "../../ui/Button";
 import LinkButton from "../../ui/LinkButton";
 import CartItem from "./CartItem";
 import EmptyCart from "./EmptyCart";
-import { getUsername } from "../user/userSlice";
+import { getUser } from "../user/userSlice";
 import { clearCart, getCart } from "./cartSlice";
 
 function Cart() {
-  const username = useSelector(getUsername);
+  const { username } = useSelector(getUser);
   const cart = useSelector(getCart);
   const dispatch = useDispatch();
 
